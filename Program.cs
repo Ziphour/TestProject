@@ -1,20 +1,11 @@
-﻿int[] fraudlentIDs = [1, 2, 3];
+﻿string [] fraudulentIds = ["B123","C234","A345","C15","B177","G3003","C235","B179"];
 
-// fraudlentIDs[0] = "A123";
-// fraudlentIDs[1] = "b123";
-
-// fraudlentIDs = ["1","2","3"];
-Console.WriteLine(fraudlentIDs[1]);
-// fraudlentIDs[2] = 4;
-Console.WriteLine($"Reassign Third: {fraudlentIDs[2]} {fraudlentIDs.Length} ");
-
-int totalIDs = 0;
-int bin = 0;
-foreach (int id in fraudlentIDs)
+foreach (string ID in fraudulentIds)
 {
-    bin++;
-    // Console.WriteLine($"Value of :{id}\nNumber:{bin}");
-    totalIDs += id;
+
+    if (ID.StartsWith('B')) {
+        Console.WriteLine(ID);
+    }
+
 
 }
-Console.WriteLine("ID " + totalIDs + " bin " + bin);
