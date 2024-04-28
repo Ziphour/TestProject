@@ -1,11 +1,20 @@
-﻿string [] fraudulentIds = ["B123","C234","A345","C15","B177","G3003","C235","B179"];
+﻿// Goal of this code is to reverese the string and detail how many times the letter "o" 
+// appears
 
-foreach (string ID in fraudulentIds)
+string sentenceMessage = "The quick brown fox jumps over the lazy dog.";
+
+char[] letterMessage = sentenceMessage.ToCharArray();
+Array.Reverse(letterMessage);
+
+int letterCount = 0;
+
+foreach (char letter in letterMessage)
 {
-
-    if (ID.StartsWith('B')) {
-        Console.WriteLine(ID);
-    }
-
-
+    if (letter == 'o') { letterCount++; }
 }
+
+
+string newMessage = new String(letterMessage);
+
+Console.WriteLine(newMessage);
+Console.WriteLine($"'o' appears {letterCount} times.");
